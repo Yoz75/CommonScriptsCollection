@@ -1,0 +1,7 @@
+{
+    "agentSpawnFrequency": 1.0,
+    "foodSpawnFrequency": 1.0,
+    "maxFoodAliveFrames": 50,
+    "maxSpikeAliveFrames": 50,
+    "spikeSpawnFrequency": 1.0
+}

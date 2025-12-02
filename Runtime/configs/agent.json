@@ -1,0 +1,13 @@
+{
+    "baseEnergy": 100.0,
+    "cannibalismEnergy": 2.5,
+    "foodEnergy": 10.0,
+    "genomeSize": 64,
+    "maxExecutedCommands": 2,
+    "maxInstructionValue": 64,
+    "maxMutationsCount": 5,
+    "minMutationsCount": 0,
+    "spikeEnergyDamage": 999.0,
+    "starveEnergy": 0.100000001490116119,
+    "walkEnergyCost": 1.0
+}

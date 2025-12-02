@@ -1,0 +1,9 @@
+{
+	"name": "com.yoz75.csc",
+	"displayName": "Common Scripts Collection",
+	"version": "1.0.0",
+	"description": "Common Scripts Collection or (CSC) is just a collections of scripts that I often use in my games (no matter 2D or 3D)",
+	"author": "yoz75",
+	"keywords": ["scripts", "collection", "CSC", "Common scripts", "c# common scripts"],
+	"license": "MIT"
+}
