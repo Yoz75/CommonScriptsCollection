@@ -14,6 +14,5 @@ namespace CSC.IO
         private void Start() => LoadManually();
 
         protected void NotifyListeners() => LoadRequired?.Invoke();
-        public void LoadManually() => LoadRequired?.Invoke();
     }
 }
