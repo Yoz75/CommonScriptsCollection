@@ -23,6 +23,16 @@ namespace CSC.IO
         /// [save directory]/MySaves/SpecialSaves/[saveFile]
         /// </summary>
         protected string InnerPath = "";
+		
+		/// <summary>
+        /// Save file name. Only used if <see cref="UseUniqueName"/> is false
+        /// </summary>
+		protected string FileName;
+		
+		/// <summary>
+		/// Should we use unique name for every object or not?
+		/// </summary>
+		protected bool UseUniqueName = true;
 
         protected void Awake()
         {
@@ -55,10 +65,22 @@ namespace CSC.IO
         private void Load()
         {
             string innerPath = Path.Combine(SaveCell.CurrentSaveFolder, InnerPath);
+			
+			string fileName;
+			
+			if(UseUniqueName)
+			{
+				fileName = NameCreator.CreateUniqueName(gameObject) + FileExtension);
+			}
+			else
+			{
+				fileName = FileName + FileExtension;
+			}
+			
             string filePath =
                 Path.Combine(SaveCell.CurrentSaveFolder,
                 InnerPath,
-                NameCreator.CreateUniqueName(gameObject) + FileExtension);
+                fileName;
 
             if(!Directory.Exists(innerPath))
             {
