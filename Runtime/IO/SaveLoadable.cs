@@ -70,7 +70,7 @@ namespace CSC.IO
 			
 			if(UseUniqueName)
 			{
-				fileName = NameCreator.CreateUniqueName(gameObject) + FileExtension);
+				fileName = NameCreator.CreateUniqueName(gameObject) + FileExtension;
 			}
 			else
 			{
@@ -80,7 +80,7 @@ namespace CSC.IO
             string filePath =
                 Path.Combine(SaveCell.CurrentSaveFolder,
                 InnerPath,
-                fileName;
+                fileName);
 
             if(!Directory.Exists(innerPath))
             {
