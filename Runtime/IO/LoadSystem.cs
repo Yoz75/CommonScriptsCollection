@@ -11,8 +11,6 @@ namespace CSC.IO
         public const string StandardLoadSystemTag = "StandardLoadSystem";
         public event Action LoadRequired;
 
-        private void Start() => LoadManually();
-
         protected void NotifyListeners() => LoadRequired?.Invoke();
     }
 }
