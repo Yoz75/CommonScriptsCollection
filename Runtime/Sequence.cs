@@ -15,6 +15,11 @@ namespace CSC
 
     public class Sequence : MonoBehaviour
     {
+        public bool IsPlaying
+        {
+            get; private set; 
+        }
+
         [SerializeField] private List<SequenceItem> Items;
 
         public void Play()
@@ -24,12 +29,16 @@ namespace CSC
 
         private IEnumerator PlayCoroutine()
         {
+            IsPlaying = true;
+
             foreach(var item in Items)
             {
                 item.Event?.Invoke();
 
                 yield return new WaitForSeconds(item.Delay);
             }
+
+            IsPlaying = false;
         }
     }
 }
