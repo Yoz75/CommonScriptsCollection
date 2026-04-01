@@ -38,5 +38,9 @@ namespace CSC.UI
         {
             SubtitlesPlayer.DefaultPlayer.Play(this);
         }
+
+        public SubtitlesProps GetCopyOfProps() => (SubtitlesProps) Props.Clone();
+
+        public Props GetCopyOfRawProps() => (Props) Props.Clone();
     }
 }
