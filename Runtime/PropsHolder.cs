@@ -73,6 +73,17 @@ namespace CSC
         /// </summary>
         [SerializeField] protected T Props;
 
+        private void Awake()
+        {
+            // Fixes issue when props store changes in Unity Editor even after reloading game
+            Props = (T) Props.Clone();
+            OnAwake();
+        }
+        protected virtual void OnAwake()
+        {
+
+        }
+
         public T GetProps() => Props;
         public override Props GetRawProps() => Props;
 
