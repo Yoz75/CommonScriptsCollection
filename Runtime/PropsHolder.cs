@@ -76,7 +76,10 @@ namespace CSC
         private void Awake()
         {
             // Fixes issue when props store changes in Unity Editor even after reloading game
-            Props = (T) Props.Clone();
+            if(Props != null)
+            {
+                Props = (T) Props.Clone();
+            }
             OnAwake();
         }
         protected virtual void OnAwake()
