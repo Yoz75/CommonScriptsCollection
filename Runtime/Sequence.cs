@@ -17,7 +17,7 @@ namespace CSC
     {
         public bool IsPlaying
         {
-            get; private set; 
+            get; protected set; 
         }
 
         [SerializeField] protected List<SequenceItem> Items;
