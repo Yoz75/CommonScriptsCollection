@@ -20,9 +20,9 @@ namespace CSC
             get; private set; 
         }
 
-        [SerializeField] private List<SequenceItem> Items;
+        [SerializeField] protected List<SequenceItem> Items;
 
-        public void Play()
+        public virtual void Play()
         {
             StartCoroutine(PlayCoroutine());
         }
