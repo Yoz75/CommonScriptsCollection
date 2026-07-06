@@ -6,6 +6,7 @@ namespace CSC.UI
     [Serializable]
     public struct Subtitles : IPropsHolder<SubtitlesProps>
     {
+		[TextArea(3, 20)]
         [SerializeField] private string Text_;
         [SerializeField] private SubtitlesProps Props;
         public string Text
